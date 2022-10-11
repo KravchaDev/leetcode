@@ -4,23 +4,23 @@ func isPalindrome(x int) bool {
 	// записываем изначально переданное число в другую переменную, для дальнейших действий с исходным X
     initial := x
 
+	switch {
 	// ноль всегда палиндром
-    if x == 0 {
-        return true
-    }
-    
-	// числа меньше нуля всегда не палиндром
-    if x < 0 {
-        return false
-    }
-	
-    // создаем переменную для конечного числа
-	finite := 0
-	for ; x != 0 ; x/=10 {
-		last := x % 10
-		finite = finite*10 + last
+	case x == 0 :
+		return true
+	// число меньше нуля всегда не палиндром
+	case x < 0 :
+		return false
+	default: 
+		// создаем переменную для конечного числа
+		finite := 0
+		for ; x != 0 ; x/=10 {
+			last := x % 10
+			finite = finite*10 + last
+		}
+		// возвращаем true/false (bool)
+		return(initial==finite)
 	}
-	return(initial==finite)
 }
 
 func main(){
