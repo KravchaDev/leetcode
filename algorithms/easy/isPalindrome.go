@@ -24,9 +24,9 @@ func isPalindrome(x int) bool {
 }
 
 func main(){
-	println("7554 is palindrome?  - ", isPalindrome(7554))
-	println("0    is palindrome?  - ", isPalindrome(0))
-	println("-121 is palindrome?  - ", isPalindrome(-121))
-	println("121 is palindrome?   - ", isPalindrome(121))
-	println("4224 is palindrome?  - ", isPalindrome(4224))
+	println("7554 is palindrome?  - ", isPalindrome(7554)) // false
+	println("0    is palindrome?  - ", isPalindrome(0))	   // true
+	println("-121 is palindrome?  - ", isPalindrome(-121)) // false
+	println("121 is palindrome?   - ", isPalindrome(121))  // true
+	println("4224 is palindrome?  - ", isPalindrome(4224)) // true
 }
